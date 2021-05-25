@@ -31,6 +31,7 @@
         'id' => $id,
         'empId' => $empId,
         'name' => $name,
+        'nic' => $nic,
         'dob' => $dob,
         'designation' => $designation,
         'gender' => $gender,

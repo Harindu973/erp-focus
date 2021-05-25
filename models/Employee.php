@@ -30,7 +30,7 @@
       //                           ORDER BY
       //                             p.created_at DESC';
 
-      $query = 'SELECT * FROM ' . $this->table . ' ORDER BY id DESC';
+      $query = 'SELECT * FROM ' . $this->table . ' ORDER BY id ASC';
       
       // Prepare statement
       $stmt = $this->conn->prepare($query);
