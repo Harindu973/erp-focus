@@ -6,6 +6,7 @@
 
     // Post Properties
     public $id;
+    public $empId;
     public $name;
     public $dob;
     public $designation;

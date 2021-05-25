@@ -6,30 +6,28 @@
   header('Access-Control-Allow-Headers: Access-Control-Allow-Headers,Content-Type,Access-Control-Allow-Methods, Authorization, X-Requested-With');
 
   include_once '../../config/Database.php';
-  include_once '../../models/Leave.php';
+  include_once '../../models/Salary.php';
 
   // Instantiate DB & connect
   $database = new Database();
   $db = $database->connect();
 
   // Instantiate blog post object
-  $leave = new Leave($db);
+  $salary = new Salary($db);
 
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
 
-  $leave->empId = $data->empId;
-  $leave->leaveType = $data->leaveType;
-  $leave->leaveDesc = $data->leaveDesc;
-  $leave->leaveDate = $data->leaveDate;
-  $leave->leaveTime = $data->leaveTime;
+  $salary->empId = $data->empId;
+  $salary->salaryValue = $data->salaryValue;
+  $salary->salaryDate = $data->salaryDate;
 
 
   // Create post
-  if($leave->create()) {
+  if($salary->create()) {
     echo json_encode(
-      array('message' => 'Leave Request sent!')
+      array('message' => 'Salary Added!')
     );
   } else {
     echo json_encode(

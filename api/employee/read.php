@@ -29,6 +29,7 @@
 
       $employee_item = array(
         'id' => $id,
+        'empId' => $empId,
         'name' => $name,
         'dob' => $dob,
         'designation' => $designation,
