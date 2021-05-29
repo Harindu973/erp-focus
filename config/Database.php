@@ -1,6 +1,6 @@
 <?php 
   class Database {
-    //DB Params
+    // DB Params
     private $host = 'us-cdbr-east-03.cleardb.com';
     private $db_name = 'heroku_e60a83519a7bbe7';
     private $username = 'b894d03d634289';
