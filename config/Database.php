@@ -1,4 +1,5 @@
 <?php 
+
   class Database {
     // DB Params
     private $host = 'us-cdbr-east-03.cleardb.com';
