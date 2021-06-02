@@ -18,19 +18,12 @@
   // Get raw posted data
   $data = json_decode(file_get_contents("php://input"));
 
-  $attendance->name = $data->name;
   $attendance->empId = $data->empId;
-  $attendance->nic = $data->nic;
-  $attendance->dob = $data->dob;
-  $attendance->designation = $data->designation;
-  $attendance->gender = $data->gender;
-  $attendance->email = $data->email;
-  $attendance->phone = $data->phone;
 
   // Create post
   if($attendance->create()) {
     echo json_encode(
-      array('message' => 'Attendance Marked')
+      array('message' => 'Attendance default inseted')
     );
   } else {
     echo json_encode(
