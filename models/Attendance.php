@@ -102,15 +102,17 @@
     // Update Post
      public function update() {
           // Create query
-          $query = 'UPDATE ' . $this->table . ' SET `attendance` = 1 WHERE `empId` = :empId';
+          $query = 'UPDATE ' . $this->table . ' SET `attendance` = 1, `time` = :time WHERE `empId` = :empId ';
 
           // Prepare statement
           $stmt = $this->conn->prepare($query);
 
           // Clean data
           $this->empId = htmlspecialchars(strip_tags($this->empId));
+          $this->time = htmlspecialchars(strip_tags($this->time));
 
           // Bind data
+          $stmt->bindParam(':time', $this->time);
           $stmt->bindParam(':empId', $this->empId);
 
           // Execute query

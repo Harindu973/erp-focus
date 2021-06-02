@@ -21,7 +21,7 @@
    //Set ID to update
  // $attendance->name = $data->name;
   $attendance->empId = $data->empId;
-  // $attendance->nic = $data->nic;
+  $attendance->time = $data->time;
   // $attendance->dob = $data->dob;
   // $attendance->designation = $data->designation;
   // $attendance->gender = $data->gender;

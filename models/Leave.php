@@ -138,29 +138,29 @@
   //         return false;
   //   }
 
-  //   // Delete Post
-  //   public function delete() {
-  //         // Create query
-  //         $query = 'DELETE FROM ' . $this->table . ' WHERE id = :id';
+    // Delete Post
+    public function delete() {
+          // Create query
+          $query = 'DELETE FROM ' . $this->table . ' WHERE empId = :empId';
 
-  //         // Prepare statement
-  //         $stmt = $this->conn->prepare($query);
+          // Prepare statement
+          $stmt = $this->conn->prepare($query);
 
-  //         // Clean data
-  //         $this->id = htmlspecialchars(strip_tags($this->id));
+          // Clean data
+          $this->empId = htmlspecialchars(strip_tags($this->empId));
 
-  //         // Bind data
-  //         $stmt->bindParam(':id', $this->id);
+          // Bind data
+          $stmt->bindParam(':empId', $this->empId);
 
-  //         // Execute query
-  //         if($stmt->execute()) {
-  //           return true;
-  //         }
+          // Execute query
+          if($stmt->execute()) {
+            return true;
+          }
 
-  //         // Print error if something goes wrong
-  //         printf("Error: %s.\n", $stmt->error);
+          // Print error if something goes wrong
+          printf("Error: %s.\n", $stmt->error);
 
-  //         return false;
-  //   }
+          return false;
+    }
     
  }
