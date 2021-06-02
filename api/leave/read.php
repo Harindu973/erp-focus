@@ -33,7 +33,8 @@
         'leaveType' => $leaveType,
         'leaveDesc' => $leaveDesc,
         'leaveDate' => $leaveDate,
-        'leaveTime' => $leaveTime
+        'leaveTime' => $leaveTime,
+        'status' => $status
       );
 
       // Push to "data"

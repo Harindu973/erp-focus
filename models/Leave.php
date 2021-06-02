@@ -30,7 +30,7 @@
       //                           ORDER BY
       //                             p.created_at DESC';
 
-      $query = 'SELECT * FROM leavetbl ORDER BY leaveId DESC';
+      $query = 'SELECT * FROM leavetbl ORDER BY leaveId ASC';
       
       // Prepare statement
       $stmt = $this->conn->prepare($query);
