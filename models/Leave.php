@@ -41,6 +41,34 @@
       return $stmt;
     }
 
+    public function pending() {
+
+
+      $query = 'SELECT * FROM leavetbl WHERE `status` = "Pending" ORDER BY leaveId ASC';
+      
+      // Prepare statement
+      $stmt = $this->conn->prepare($query);
+
+      // Execute query
+      $stmt->execute();
+
+      return $stmt;
+    }
+
+    public function approved() {
+
+
+      $query = 'SELECT * FROM leavetbl WHERE `status` = "Approved" ORDER BY leaveId ASC';
+      
+      // Prepare statement
+      $stmt = $this->conn->prepare($query);
+
+      // Execute query
+      $stmt->execute();
+
+      return $stmt;
+    }
+
   //   // Get Single Post
   //   public function read_single() {
   //         // Create query
