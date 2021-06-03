@@ -38,6 +38,31 @@
       return $stmt;
     }
 
+
+        // Get Posts
+        public function present() {
+          // Create query
+    
+          // $query = 'SELECT c.name as category_name, p.id, p.category_id, p.title, p.body, p.author, p.created_at
+          //                           FROM ' . $this->table . ' p
+          //                           LEFT JOIN
+          //                             categories c ON p.category_id = c.id
+          //                           ORDER BY
+          //                             p.created_at DESC';
+    
+          $query = 'SELECT * FROM attendance WHERE `time` != "Not marked yet" ORDER BY attId ASC';
+          
+          // Prepare statement
+          $stmt = $this->conn->prepare($query);
+    
+          // Execute query
+          $stmt->execute();
+    
+          return $stmt;
+        }
+
+
+
   //   // Get Single Post
   //   public function read_single() {
   //         // Create query
